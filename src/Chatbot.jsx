@@ -1,92 +1,3 @@
-// import React, { useState } from "react";
-// import "./Chatbot.css";
-
-// function Chatbot() {
-//   const [messages, setMessages] = useState([]);
-//   const [input, setInput] = useState("");
-
-//   const sendMessage = async () => {
-//     if (!input.trim()) return;
-  
-//     const userMessage = { sender: "User", text: input };
-//     setMessages([...messages, userMessage]);
-//     setInput("");
-  
-//     try {
-//       console.log('going to fetch',input);
-      
-//       const response = await fetch("http://localhost:5000/analyze-mood", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({ message: input }),
-//       });
-//       const data = await response.json();
-  
-//       const botMessage = {
-//         sender: "Bot",
-//         text: `Detected Mood: ${data.mood}`,
-//       };
-//   console.log(data.songs);
-  
-//       let songMessages = [];
-  
-//       // ✅ Fix: Filter out null values before mapping
-//       if (Array.isArray(data.songs) && data.songs.length > 0) {
-//         const validSongs = data.songs.filter((song) => song !== null); // Remove null values
-  
-//         if (validSongs.length > 0) {
-//           songMessages = validSongs.map((song) => ({
-//             sender: "Bot",
-//             text: `🎵 ${song.name}: `,
-//             link: song.external_urls.spotify,
-//           }));
-//         } else {
-//           songMessages.push({ sender: "Bot", text: "No valid song recommendations found." });
-//         }
-//       } else {
-//         songMessages.push({ sender: "Bot", text: "No song recommendations found for this mood." });
-//       }
-//   console.log(songMessages);
-  
-//       setMessages((prev) => [...prev, botMessage, ...songMessages]);
-//     } catch (error) {
-//       console.error("Error fetching response:", error);
-//       setMessages((prev) => [...prev, { sender: "Bot", text: "Sorry, something went wrong. Try again later." }]);
-//     }
-//   };
-  
-
-//   return (
-//     <div className="chatbot-container">
-    
-//       <main className="main-content">
-//         <div className="chatbot-box">
-//           <h2 className="chatbot-title">Chat with AI 🎵</h2>
-//           <div className="chatbot-messages">
-//             {messages.map((msg, index) => (
-//               <p key={index} className={msg.sender === "User" ? "user-message" : "bot-message"}>
-//                 <strong>{msg.sender}:</strong> {msg.text}
-//                 {msg.link && (
-//                   <a href={msg.link} target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
-//                 )}
-//               </p>
-//             ))}
-//           </div>
-//           <div className="chatbot-input-container">
-//             <input
-//               type="text"
-//               placeholder="Type your message..."
-//               value={input}
-//               onChange={(e) => setInput(e.target.value)}
-//             />
-//             <button onClick={sendMessage}>Send</button>
-//           </div>
-//         </div>
-//       </main>
- 
-//     </div>
-//   );
-// }
 
 import React, { useState } from "react";
 
@@ -151,7 +62,7 @@ function Chatbot() {
   
       <main className="main-content">
         <div className="chatbot-box">
-          <h2 className="chatbot-title">Chat with AI 🎵</h2>
+          <h2 className="chatbot-title">Chat with AI 🎵 <br /> <span> (send your thoughts and get music)</span> </h2>
           <div className="chatbot-messages">
             {messages.map((msg, index) => (
               <div key={index} className={msg.sender === "User" ? "user-message" : "bot-message"}>
