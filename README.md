@@ -1,12 +1,94 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# AI Music Chatbot
 
-Currently, two official plugins are available:
+## 🎵 Overview
+AI Music Chatbot is an intelligent chatbot that recommends songs based on the tone of the conversation. Built using the **MERN stack**, it leverages the **Google Gemini API** for mood analysis and fetches song recommendations accordingly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- **Conversational AI**: Detects user mood from text conversation.
+- **Song Recommendations**: Suggests songs based on emotions detected.
+- **Voice Input Support** (Planned): Allows users to interact via voice.
+- **Dark Mode** (Planned): User-friendly dark theme for better UX.
+- **Multilingual Support** (Planned): Supports multiple languages.
+- **Spotify API Integration**: Fetches **Telugu songs by default**.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- **Frontend**: React.js (with plain HTML/CSS)
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **API**: Google Gemini API (for mood analysis)
+- **Deployment**: Vercel
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+```
+📦 AI-Music-Chatbot
+ ┣ 📂 client  # Frontend
+ ┃ ┣ 📂 src
+ ┃ ┃ ┣ 📜 App.js
+ ┃ ┃ ┣ 📜 index.js
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📂 styles
+ ┣ 📂 server  # Backend
+ ┃ ┣ 📂 routes
+ ┃ ┣ 📜 server.js
+ ┣ 📜 README.md
+ ┣ 📜 package.json
+```
+
+## 🎯 How It Works
+1. **User sends a message** ➝ Chatbot processes text.
+2. **Google Gemini API analyzes the mood** of the text.
+3. **Chatbot fetches song recommendations** based on mood.
+4. **Displays song suggestions** to the user.
+
+## 🚀 Getting Started
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/yourusername/AI-Music-Chatbot.git
+cd AI-Music-Chatbot
+```
+### 2️⃣ Install Dependencies
+```sh
+# Install frontend dependencies
+cd client
+npm install
+
+# Install backend dependencies
+cd ../server
+npm install
+```
+### 3️⃣ Start the Application
+```sh
+# Run frontend
+cd client
+npm start
+
+# Run backend
+cd ../server
+npm start
+```
+### 4️⃣ Open in Browser
+Go to `http://localhost:3000/`
+
+## 🌐 Deployment
+The chatbot is deployed on **Vercel** and can be accessed here:
+🔗 [Live Demo](https://ai-music-chatbot.vercel.app/)
+
+## 🤝 Contribution
+1. Fork the repo.
+2. Create a new branch (`feature-xyz`).
+3. Commit changes.
+4. Push to your branch.
+5. Open a Pull Request.
+
+## 📜 License
+This project is **open-source** and available under the **MIT License**.
+
+---
+💡 **Future Enhancements:**
+- **Integration with YouTube Music & Apple Music**
+- **Real-time chatbot improvements**
+- **Emotion-based playlist creation**
+
+🔹 **Developed by:** Developer-Jashuva 🚀
+
